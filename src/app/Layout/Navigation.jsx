@@ -14,7 +14,7 @@ function Navigation() {
         <img
           src='https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-assets/headshot.jpeg'
           className='mr-3 h-8 sm:h-9 rounded-full'
-          alt='Flowbite React Logo'
+          alt='Web Developer Picture'
         />
         <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white'>
           Shawn Papineau
@@ -25,13 +25,19 @@ function Navigation() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href='#' active>
+        <Navbar.Link className='text-white' href='/' active>
           Home
         </Navbar.Link>
-        <Navbar.Link href='#'>About</Navbar.Link>
-        <Navbar.Link href='#'>Developer Portfolio</Navbar.Link>
+        <Navbar.Link className='text-white' href='/'>
+          About
+        </Navbar.Link>
+        <Navbar.Link className='text-white' href='/portfolio/developer'>
+          Developer Portfolio
+        </Navbar.Link>
 
-        <Navbar.Link href='#'>Contact</Navbar.Link>
+        <Navbar.Link className='text-white' href='#'>
+          Contact
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   )

@@ -14,6 +14,7 @@ import {
 import ServiceCards from './components/ServiceCards'
 import ContactCard from './components/ContactCard'
 import HomeTabSection from './components/HomeTabSection'
+import CreativeGrid from './components/CreativeGrid'
 
 export default function Home() {
   return (
@@ -66,16 +67,22 @@ export default function Home() {
           </p>
         </aside>
       </section>
-      <section className='px-12'>
+      <section className='px-12 mb-32'>
         <h3 className=''>I Provide Services In: </h3>
 
         <ServiceCards />
       </section>
-      <section className='mt-32'>
-        <h3 className='text-7xl text-center'>
-          In Case You Need A Few More Reasons to Work with Me.
+      <section>
+        <h3 className='text-7xl p-10 text-left'>
+          You Should Hire Me. Here's Why.
         </h3>
-        <p className='max-w-[1920px] text-center font-light mx-auto'>
+        <CreativeGrid />
+      </section>
+      <section className='mt-32'>
+        <h4 className='text-7xl text-center'>
+          In Case You Need A Few More Reasons to Work with Me.
+        </h4>
+        <p className='max-w-[1920px] text-center font-light  bg-white rounded-xl py-8 lg:px-64 text-black mx-10 ring-2 ring-purple-500 shadow-white shadow-md mt-10'>
           You want to make sure that you get the most value for your investment.
           I resonate with that. Here are some more ways I can bring incredible
           value to bringing your vision to life.
