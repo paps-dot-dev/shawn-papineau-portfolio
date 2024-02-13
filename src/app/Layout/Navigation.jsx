@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { Navbar, Button, Dropdown } from 'flowbite-react'
 import headshot from '../../../public/headshot.jpeg'
 import supabase from '../../../lib/supabase'
+import Link from 'next/link'
 
 function Navigation() {
   return (
@@ -10,7 +11,7 @@ function Navigation() {
       fluid
       rounded
       className='p-8 bg-gradient-to-b from-purple-800 to-indigo-900'>
-      <Navbar.Brand href='https://flowbite-react.com'>
+      <Navbar.Brand href='/'>
         <img
           src='https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-assets/headshot.jpeg'
           className='mr-3 h-8 sm:h-9 rounded-full'
@@ -21,23 +22,30 @@ function Navigation() {
         </span>
       </Navbar.Brand>
       <div className='flex md:order-2'>
-        <Button>Get started</Button>
+        <Button color='blue'>Contact Me!</Button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link className='text-white' href='/' active>
+        <Link
+          href={'/'}
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold ease-linear duration-75 hover:text-lg text-gray-500 hover:text-white'>
           Home
-        </Navbar.Link>
-        <Navbar.Link className='text-white' href='/'>
+        </Link>
+        <Link
+          href={'/portfolio/developer'}
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
+          Portfolio
+        </Link>
+        <Link
+          href={'/'}
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
           About
-        </Navbar.Link>
-        <Navbar.Link className='text-white' href='/portfolio/developer'>
-          Developer Portfolio
-        </Navbar.Link>
-
-        <Navbar.Link className='text-white' href='#'>
+        </Link>
+        <Link
+          href={'/contact'}
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
           Contact
-        </Navbar.Link>
+        </Link>
       </Navbar.Collapse>
     </Navbar>
   )

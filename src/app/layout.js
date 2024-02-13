@@ -2,6 +2,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeModeScript } from 'flowbite-react'
 import Navigation from './Layout/Navigation'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import SiteFooter from './Layout/SiteFooter'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navigation />
         {children}
+        <ToastContainer />
         <SiteFooter />
       </body>
     </html>

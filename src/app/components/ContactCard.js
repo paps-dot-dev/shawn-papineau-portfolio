@@ -14,6 +14,8 @@ import {
 import Image from 'next/image'
 import { FaInstagram, FaTwitter } from 'react-icons/fa'
 import { SiGithub, SiInstagram, SiX } from 'react-icons/si'
+import supabase from '../../../lib/supabase'
+import { toast } from 'react-toastify'
 
 function ContactCard({ headshot }) {
   const [openModal, setOpenModal] = useState(false)
@@ -22,7 +24,6 @@ function ContactCard({ headshot }) {
     lastName: '',
     email: '',
     projectDetails: '',
-    projectCategory: 'Web Development',
   })
 
   function onCloseModal() {
@@ -32,8 +33,39 @@ function ContactCard({ headshot }) {
       lastName: '',
       email: '',
       projectDetails: '',
-      projectCategory: 'Web Development',
+      projectCategory: 1,
     })
+  }
+
+  const handleFormChange = (e) => {
+    e.preventDefault()
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const { data, error } = await supabase
+      .from('contact_entries')
+      .insert([
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          project_description: formData.projectDetails,
+          project_category_id: formData.projectCategory,
+        },
+      ])
+      .select()
+    onCloseModal()
+
+    toast(
+      'Thank you for reaching out to connect! I will get in contact with you as soon as I can!',
+      { theme: 'dark' }
+    )
   }
 
   return (
@@ -79,26 +111,32 @@ function ContactCard({ headshot }) {
                 id='firstName'
                 placeholder='Steve'
                 value={formData.firstName}
+                onChange={handleFormChange}
               />
               <Label htmlFor='lastName'>Last Name</Label>
               <TextInput
                 id='lastName'
                 placeholder='Jobs'
                 value={formData.lastName}
+                onChange={handleFormChange}
               />
               <Label htmlFor='email'>Good Email to Reach You</Label>
               <TextInput
                 id='email'
                 placeholder='downwithscully@icloud.com'
                 value={formData.email}
+                onChange={handleFormChange}
               />
-              <Label htmlFor='' className='text-sm'>
+              <Label htmlFor='projectDetails' className='text-sm'>
                 Tell Me A Bit About Your Project:
               </Label>
-              <Select id='projectCategory' value={formData.projectCategory}>
-                <option>Web Development</option>
-                <option>Web Design</option>
-                <option>Digital Media</option>
+              <Select
+                onChange={handleFormChange}
+                id='projectCategory'
+                value={formData.projectCategory}>
+                <option value={1}>Web Development</option>
+                <option value={3}>Web Design</option>
+                <option value={2}>Digital Media</option>
               </Select>
               <Textarea
                 id='projectDetails'
@@ -106,9 +144,12 @@ function ContactCard({ headshot }) {
                 value={formData.projectDetails}
                 required
                 rows={4}
+                onChange={handleFormChange}
               />
               <div className='flex justify-end items-center mt-4 space-x-2'>
-                <Button color='purple'>Submit</Button>
+                <Button onClick={handleSubmit} color='purple'>
+                  Submit
+                </Button>
                 <Button onClick={onCloseModal} color='gray'>
                   Cancel
                 </Button>
