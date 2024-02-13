@@ -12,10 +12,11 @@ import {
   Textarea,
 } from 'flowbite-react'
 import Image from 'next/image'
-import { FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaDownload, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { SiGithub, SiInstagram, SiX } from 'react-icons/si'
 import supabase from '../../../lib/supabase'
 import { toast } from 'react-toastify'
+import ResumeButton from './ResumeButton'
 
 function ContactCard({ headshot }) {
   const [openModal, setOpenModal] = useState(false)
@@ -69,7 +70,7 @@ function ContactCard({ headshot }) {
   }
 
   return (
-    <Card className='max-w-xl  py-16 px-24 bg-gray-950 border-purple-400'>
+    <Card className='max-w-xl  pt-8 px-24 bg-gray-950 border-purple-400'>
       <div className='flex flex-col justify-center items-center pb-10'>
         <Image
           alt='Bonnie image'
@@ -97,8 +98,9 @@ function ContactCard({ headshot }) {
         <button
           onClick={() => setOpenModal(true)}
           className='mt-6 bg-purple-800 p-4 rounded-xl w-full'>
-          Contact Me!
+          Contact Me
         </button>
+        <ResumeButton />
         <Modal show={openModal} size='md' onClose={onCloseModal} popup>
           <Modal.Header className='p-4'>
             <Image className='w-24 rounded-full' src={headshot} />

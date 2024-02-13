@@ -15,6 +15,8 @@ import ServiceCards from './components/ServiceCards'
 import ContactCard from './components/ContactCard'
 import HomeTabSection from './components/HomeTabSection'
 import CreativeGrid from './components/CreativeGrid'
+import Typewriter from './components/Typewriter'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -24,9 +26,13 @@ export default function Home() {
         <p>Web Developer</p>
         <p>Digital Creative</p>
       </div>
-      <section className='flex flex-col justify-center items-center pb-24 lg:p-32 p-8 mt-32 max-w-[1200px] mx-auto'>
+      <section className='flex flex-col justify-center items-center pb-24 lg:p-32 p-8 mt-32 max-w-[1200px] mx-auto font-extralight'>
         <h1 className=' text-6xl lg:text-[5em]'>
-          Make your next App a creative one.
+          Make your next <br></br> <Typewriter /> <br /> a{' '}
+          <span className='bg-gradient-to-tr from-indigo-400 to-violet-500 bg-clip-text text-transparent font-medium'>
+            creative
+          </span>{' '}
+          one.
         </h1>
         <p className='mt-2 text-xl font-light '>
           In a world where online presence is paramount, I specialize in
@@ -35,9 +41,11 @@ export default function Home() {
           dynamic e-commerce platform, I have the skills and ingenuity to turn
           your ideas into reality.
         </p>
-        <button className='bg-gradient-to-tr from-purple-900 to-purple-800 p-4 w-full rounded-full mt-4 text-xl font-extralight lg:w-[560px] lg:p-5 lg:mt-12 hover:to-purple-600 duration-200 ease-linear hover:-translate-y-2'>
+        <Link
+          href='/contact'
+          className='bg-gradient-to-tr from-purple-900 to-purple-800 p-4 w-full rounded-full mt-4 text-xl font-extralight text-center lg:w-[560px] lg:p-5 lg:mt-12 hover:to-purple-600 duration-200 ease-linear hover:-translate-y-2'>
           Let's Connect!
-        </button>
+        </Link>
       </section>
       <section className='mb-32'>
         <div className='flex justify-between flex-wrap items-center text-5xl lg:text-7xl lg:px-32'>
