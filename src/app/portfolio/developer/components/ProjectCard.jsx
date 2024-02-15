@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'flowbite-react'
 import Link from 'next/link'
+import { FaGithub } from 'react-icons/fa'
 
 function ProjectCard({ project }) {
   return (
@@ -19,11 +20,6 @@ function ProjectCard({ project }) {
             <li className='bg-gradient-to-br from-purple-800 to-indigo-700 rounded-full py-1 px-2'>
               {project.technology_secondary}
             </li>
-            {project.technology_tertiary !== null ? (
-              <li className='bg-gradient-to-br from-purple-800 to-indigo-700 rounded-full py-1 px-2 mt-1'>
-                {project.technology_tertiary}
-              </li>
-            ) : null}
           </ul>
         </div>
       </Card>
