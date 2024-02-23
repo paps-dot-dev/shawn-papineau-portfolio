@@ -2,19 +2,20 @@ import supabase from '../../../../../lib/supabase'
 
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
-export default async function ProjectDetails({ params }) {
+async function ProjectDetails({ params }) {
   const id = params.id
 
   const { data, error } = await supabase
     .from('projects')
     .select('*')
-    .eq('id', BigInt(id))
+    .range(0, 9)
+    .eq('id', id)
     .single()
+  const projects = data
 
   // const filter = data.filter((project) => project.id == id)
   // const projects = filter[0]
-  console.log(data)
-  const projects = data
+
   return (
     <main>
       <section className='flex justify-between items-start mt-8 mb-8'>
@@ -42,7 +43,9 @@ export default async function ProjectDetails({ params }) {
       <div className='text-gray-300 mb-16 grid grid-cols-3 gap-8 text-xl lg:text-2xl xl:text-3xl text-center font-extralight '>
         <span>{projects.technology_primary}</span>
         <span>{projects.technology_secondary}</span>
-        <span>{projects.technology_tertiary}</span>
+        {projects.technology_tertiary != null && (
+          <span>{projects.technology_tertiary}</span>
+        )}
       </div>
       <img
         src={projects.project_hero}
@@ -52,3 +55,5 @@ export default async function ProjectDetails({ params }) {
     </main>
   )
 }
+
+export default ProjectDetails

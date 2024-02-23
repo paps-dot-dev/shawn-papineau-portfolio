@@ -5,7 +5,9 @@ import { FaGithub } from 'react-icons/fa'
 
 function ProjectCard({ project }) {
   return (
-    <Link href={`/portfolio/developer/${project.id}`}>
+    <Link
+      title={`${project.project_details}`}
+      href={`/portfolio/developer/${project.id}`}>
       <Card className='w-[400px] h-[500px] text-black mb-4 hover:-translate-y-4 opacity-50 hover:opacity-100 ease-linear duration-200 '>
         <img src={project.project_hero} className=' rounded-lg ' />
         <div className='flex justify-between items-center'>

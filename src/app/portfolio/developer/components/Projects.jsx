@@ -3,7 +3,10 @@ import ProjectCard from './ProjectCard'
 import supabase from '../../../../../lib/supabase'
 
 async function Projects() {
-  const { data, error } = await supabase.from('projects').select('*')
+  const { data, error } = await supabase
+    .from('projects')
+    .select('*')
+    .range(0, 9)
   const projects = data
 
   return (
