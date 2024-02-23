@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function ContactPage() {
-  return <div>Contact Me</div>
+  return <section className='data-scroll-section'>Contact Me</section>
 }

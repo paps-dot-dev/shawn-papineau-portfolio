@@ -4,7 +4,7 @@ import headshot from '../../../public/headshot.jpeg'
 
 export default function About() {
   return (
-    <main className='flex flex-col items-center lg:flex-row justify-between py-32 px-8 '>
+    <>
       <ContactCard headshot={headshot} />
       <aside className='w-full lg:w-1/2 bg-white  text-black lg:p-24 rounded-lg'>
         <h3 className='text-4xl font-semibold mb-8'>{`<A Message from the Dev/>`}</h3>
@@ -38,6 +38,6 @@ export default function About() {
           you to bring your vision to life and deliver exceptional results.
         </p>
       </aside>
-    </main>
+    </>
   )
 }

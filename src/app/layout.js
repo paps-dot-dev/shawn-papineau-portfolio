@@ -5,6 +5,7 @@ import Navigation from './Layout/Navigation'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import SiteFooter from './Layout/SiteFooter'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Navigation />
-        {children}
+        <main className='flex flex-col items-center  justify-between py-32 px-8 max-w-screen'>
+          {children}
+        </main>
         <ToastContainer />
         <SiteFooter />
       </body>
