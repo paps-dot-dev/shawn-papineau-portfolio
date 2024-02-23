@@ -17,7 +17,7 @@ async function ProjectDetails({ params }) {
   // const projects = filter[0]
 
   return (
-    <main>
+    <div>
       <section className='flex justify-between items-start mt-8 mb-8'>
         <h1 className='text-7xl lg:text-8xl font-extralight mt-8 text-center bg-gradient-to-r from-white to-purple-500 bg-clip-text text-transparent p-2'>
           {projects.project_name}
@@ -52,7 +52,7 @@ async function ProjectDetails({ params }) {
         className='w-4/5 md:w-1/2 xl:w-1/2 max-w-[750px] mx-auto rounded-xl shadow-white shadow-md ring-2 ring-purple-200'
       />
       <p className='text-white'>{projects.project_details}</p>
-    </main>
+    </div>
   )
 }
 

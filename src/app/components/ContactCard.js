@@ -25,6 +25,7 @@ function ContactCard({ headshot }) {
     lastName: '',
     email: '',
     projectDetails: '',
+    projectCategory: 'Website',
   })
 
   function onCloseModal() {
@@ -34,7 +35,7 @@ function ContactCard({ headshot }) {
       lastName: '',
       email: '',
       projectDetails: '',
-      projectCategory: 1,
+      projectCategory: 'Website',
     })
   }
 
@@ -57,14 +58,14 @@ function ContactCard({ headshot }) {
           last_name: formData.lastName,
           email: formData.email,
           project_description: formData.projectDetails,
-          project_category_id: formData.projectCategory,
+          project_category: formData.projectCategory,
         },
       ])
       .select()
     onCloseModal()
 
     toast(
-      'Thank you for reaching out to connect! I will get in contact with you as soon as I can!',
+      `Hey ${formData.firstName}! Thank you for reaching out to connect! I will get in contact with you as soon as I can!`,
       { theme: 'dark' }
     )
   }
@@ -146,9 +147,10 @@ function ContactCard({ headshot }) {
                 id='projectCategory'
                 value={formData.projectCategory}
                 className='mb-2'>
-                <option value={1}>Web Development</option>
-                <option value={3}>Web Design</option>
-                <option value={2}>Digital Media</option>
+                <option value='Website'>Web Development</option>
+                <option value='Web Application'>Web Application</option>
+                <option value='UX Design'>UI/UX Design</option>
+                <option value='Job Opportunity'>I want to hire you!</option>
               </Select>
               <Textarea
                 id='projectDetails'

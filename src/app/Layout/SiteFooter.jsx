@@ -1,6 +1,8 @@
 'use client'
 
 import { Footer } from 'flowbite-react'
+import { FaGithub, FaInstagram } from 'react-icons/fa'
+import { SiX } from 'react-icons/si'
 
 function SiteFooter() {
   return (
@@ -8,16 +10,31 @@ function SiteFooter() {
       <div className='w-full text-center '>
         <div className='w-full justify-between sm:flex sm:items-center sm:justify-between'>
           <Footer.Brand
-            href='https://flowbite.com'
-            src='https://flowbite.com/docs/images/logo.svg'
-            alt='Flowbite Logo'
+            href='https://github.com/paps-dot-dev'
+            src='https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-assets/headshot.jpeg'
+            alt='Picture of Web Developer, Shawn Papineau'
             name='Shawn Papineau'
           />
+          <Footer.LinkGroup className='lg:pl-32 mb-4 text-xl lg:text-2xl'>
+            <Footer.Link
+              target='_blank'
+              href='https://instagram.com/shawn.paps'>
+              <FaInstagram />
+            </Footer.Link>
+            <Footer.Link target='_blank' href='https://github.com/paps-dot-dev'>
+              <FaGithub />
+            </Footer.Link>
+            <Footer.Link target='_blank' href='https://x.com/shawn_paps'>
+              <SiX />
+            </Footer.Link>
+          </Footer.LinkGroup>
           <Footer.LinkGroup>
-            <Footer.Link href='#'>About</Footer.Link>
-            <Footer.Link href='#'>Privacy Policy</Footer.Link>
-            <Footer.Link href='#'>Licensing</Footer.Link>
-            <Footer.Link href='#'>Contact</Footer.Link>
+            <Footer.Link href='/about'>About</Footer.Link>
+            <Footer.Link href='/portfolio/developer'>See My Work</Footer.Link>
+            <Footer.Link href='/contact'>Contact Me</Footer.Link>
+            <Footer.Link href='https://github.com/paps-dot-dev'>
+              Github Profile
+            </Footer.Link>
           </Footer.LinkGroup>
         </div>
         <Footer.Divider />
