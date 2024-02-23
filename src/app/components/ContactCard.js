@@ -58,14 +58,14 @@ function ContactCard({ headshot }) {
           last_name: formData.lastName,
           email: formData.email,
           project_description: formData.projectDetails,
-          project_category_id: formData.projectCategory,
+          project_category: formData.projectCategory,
         },
       ])
       .select()
     onCloseModal()
 
     toast(
-      'Thank you for reaching out to connect! I will get in contact with you as soon as I can!',
+      `Hey ${formData.firstName}! Thank you for reaching out to connect! I will get in contact with you as soon as I can!`,
       { theme: 'dark' }
     )
   }
