@@ -37,7 +37,7 @@ function Navigation() {
           Portfolio
         </Link>
         <Link
-          href={'/'}
+          href={'/about'}
           className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
           About
         </Link>

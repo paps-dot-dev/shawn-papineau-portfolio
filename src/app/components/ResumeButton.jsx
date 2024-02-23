@@ -5,13 +5,13 @@ import supabase from '../../../lib/supabase'
 
 export default function ResumeButton() {
   const [resumeUrl, setResumeUrl] = useState(
-    'https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-files/sample.pdf?t=2024-02-13T18%3A41%3A47.125Z'
+    'https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-files/spapineau_resume_detailed.pdf'
   )
 
   const fetchResumeUrl = async () => {
     const { publicUrl, error } = await supabase.storage
       .from('website-files')
-      .getPublicUrl('sample.pdf')
+      .getPublicUrl('spapineau_resume_detailed.pdf')
 
     if (error) {
       console.error('Error fetching resume URL:', error.message)

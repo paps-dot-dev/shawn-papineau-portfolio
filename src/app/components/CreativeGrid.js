@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Tooltip } from 'flowbite-react'
+import { Button, Card, Tooltip } from 'flowbite-react'
 import { FaReact } from 'react-icons/fa'
 import {
   SiAmazonaws,
@@ -10,6 +10,7 @@ import {
   SiSupabase,
   SiVite,
 } from 'react-icons/si'
+import Link from 'next/link'
 
 function CreativeGrid() {
   return (
@@ -32,12 +33,8 @@ function CreativeGrid() {
           Business Solutions - <span className='text-6xl'>Big</span> &{' '}
           <span className='font-light text-md'>small</span>
         </p>
-        <p>
-          {' '}
-          I have professional experience innovating & creating with these
-          companies:
-        </p>
-        <div className=' grid grid-cols-3 grid-rows-1 items-center'>
+        <p> I have proudly & professionally innovated with these companies:</p>
+        <div className=' grid grid-cols-3 p-20 grid-rows-1 items-center'>
           <img
             className='col-span-1 p-4 '
             src='https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-assets/noble-2.webp'
@@ -54,15 +51,20 @@ function CreativeGrid() {
             alt='Dead Wing Recordings'
           />
         </div>
+        <Link
+          href={'/contact'}
+          className='p-6 font-medium bg-gradient-to-br from-purple-600 to-blue-600 text-center text-white rounded-lg hover:opacity-50 hover:-translate-y-1 duration-100 ease-linear hover:shadow-inner'>
+          Want to see your company here?
+        </Link>
       </Card>
       <Card className='col-span-1 row-span-4'>
         {' '}
-        <p className='bg-gradient-to-r from-purple-800 to-indigo-700 text-transparent bg-clip-text text-4xl'>
-          Specialization
+        <p className='bg-gradient-to-r from-purple-500 to-blue-600 text-transparent bg-clip-text text-4xl lg:text-5xl font-bold'>
+          Specialized
         </p>
-        <p>
+        <p className='text-xl'>
           I am{' '}
-          <i className=' font-bold bg-gradient-to-r from-purple-800 to-indigo-700 text-transparent bg-clip-text'>
+          <i className=' font-bold bg-gradient-to-r from-purple-800 to-indigo-700 text-transparent bg-clip-text text'>
             really
           </i>{' '}
           good with these technologies:

@@ -75,23 +75,32 @@ function ContactCard({ headshot }) {
         <Image
           alt='Bonnie image'
           src={headshot}
-          className='mb-3 rounded-full shadow-lg h-[150px] w-[150px] lg:h-80 lg:w-80 border-2 border-purple-500'
+          className='mb-3 rounded-full shadow-lg h-[200px] w-[200px] lg:h-80 lg:w-80 border-2 border-purple-500'
         />
 
         <h5 className='mb-1 text-2xl font-medium text-gray-200 dark:text-white'>
           Shawn Papineau
         </h5>
-        <span className='text-md text-gray-500 dark:text-gray-400'>
-          Digital Creative
-        </span>
-        <div className='mt-4 flex space-x-8 lg:space-x-20 lg:mt-6'>
-          <a href='#' className='text-3xl'>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>
+          Full Stack Developer | Data Engineer | Digital Creative
+        </div>
+        <div className='flex space-x-8 lg:space-x-20 lg:mt-16 lg:mb-16 my-8'>
+          <a
+            href='https://instagram.com/shawn.paps'
+            target='_blank'
+            className='text-4xl opacity-50 hover:text-purple-400 hover:animate-pulse hover:opacity-100 ease-linear duration-100 hover:-translate-y-1 '>
             <SiInstagram />
           </a>
-          <a href='#' className='text-3xl'>
+          <a
+            href='https://x.com/shawn_paps'
+            target='_blank'
+            className='text-4xl opacity-50 hover:text-purple-400 hover:animate-pulse hover:opacity-100 ease-linear duration-100 hover:-translate-y-1'>
             <SiX />
           </a>
-          <a href='#' className='text-3xl'>
+          <a
+            href='https://github.com/paps-dot-dev'
+            target='_blank'
+            className='text-4xl opacity-50 hover:text-purple-400 hover:animate-pulse hover:opacity-100 ease-linear duration-100 hover:-translate-y-1'>
             <SiGithub />
           </a>
         </div>
@@ -125,7 +134,7 @@ function ContactCard({ headshot }) {
               <Label htmlFor='email'>Good Email to Reach You</Label>
               <TextInput
                 id='email'
-                placeholder='downwithscully@icloud.com'
+                placeholder='stevejobs@icloud.com'
                 value={formData.email}
                 onChange={handleFormChange}
               />
@@ -135,14 +144,15 @@ function ContactCard({ headshot }) {
               <Select
                 onChange={handleFormChange}
                 id='projectCategory'
-                value={formData.projectCategory}>
+                value={formData.projectCategory}
+                className='mb-2'>
                 <option value={1}>Web Development</option>
                 <option value={3}>Web Design</option>
                 <option value={2}>Digital Media</option>
               </Select>
               <Textarea
                 id='projectDetails'
-                placeholder='Just a sentence or two about the project...'
+                placeholder='A sentence or two about the project...'
                 value={formData.projectDetails}
                 required
                 rows={4}
