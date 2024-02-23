@@ -25,6 +25,7 @@ function ContactCard({ headshot }) {
     lastName: '',
     email: '',
     projectDetails: '',
+    projectCategory: 'Website',
   })
 
   function onCloseModal() {
@@ -34,7 +35,7 @@ function ContactCard({ headshot }) {
       lastName: '',
       email: '',
       projectDetails: '',
-      projectCategory: 1,
+      projectCategory: 'Website',
     })
   }
 
@@ -146,9 +147,10 @@ function ContactCard({ headshot }) {
                 id='projectCategory'
                 value={formData.projectCategory}
                 className='mb-2'>
-                <option value={1}>Web Development</option>
-                <option value={3}>Web Design</option>
-                <option value={2}>Digital Media</option>
+                <option value='Website'>Web Development</option>
+                <option value='Web Application'>Web Application</option>
+                <option value='UX Design'>UI/UX Design</option>
+                <option value='Job Opportunity'>I want to hire you!</option>
               </Select>
               <Textarea
                 id='projectDetails'

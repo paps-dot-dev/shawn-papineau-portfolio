@@ -4,9 +4,9 @@ import headshot from '../../../public/headshot.jpeg'
 
 export default function About() {
   return (
-    <>
+    <main className='flex justify-center items-center flex-col lg:flex-row space-x-16'>
       <ContactCard headshot={headshot} />
-      <aside className='w-full lg:w-1/2 bg-white  text-black lg:p-24 rounded-lg'>
+      <section className='w-full lg:w-1/2 bg-white  text-black lg:p-24 rounded-lg'>
         <h3 className='text-4xl font-semibold mb-8'>{`<A Message from the Dev/>`}</h3>
 
         <p className=' text-xl mb-4'>
@@ -37,7 +37,7 @@ export default function About() {
           boundaries of what's possible, I look forward to collaborating with
           you to bring your vision to life and deliver exceptional results.
         </p>
-      </aside>
-    </>
+      </section>
+    </main>
   )
 }

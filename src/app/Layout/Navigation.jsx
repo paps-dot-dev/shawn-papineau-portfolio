@@ -22,28 +22,28 @@ function Navigation() {
         </span>
       </Navbar.Brand>
       <div className='flex md:order-2'>
-        <Button color='blue'>Contact Me!</Button>
+        <Button color='light'>Contact Me!</Button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
         <Link
           href={'/'}
-          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold ease-linear duration-75 hover:text-lg text-gray-500 hover:text-white'>
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold ease-linear duration-75  text-gray-500 hover:text-white'>
           Home
         </Link>
         <Link
           href={'/portfolio/developer'}
-          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear  text-gray-500 hover:text-white'>
           Portfolio
         </Link>
         <Link
           href={'/about'}
-          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear  text-gray-500 hover:text-white'>
           About
         </Link>
         <Link
           href={'/contact'}
-          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear hover:text-lg text-gray-500 hover:text-white'>
+          className='text-sm font-light hover:bg-white hover:bg-opacity-25 p-2 rounded-md hover:font-semibold duration-75 ease-linear  text-gray-500 hover:text-white'>
           Contact
         </Link>
       </Navbar.Collapse>
