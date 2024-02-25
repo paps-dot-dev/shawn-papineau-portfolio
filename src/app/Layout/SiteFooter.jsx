@@ -6,7 +6,9 @@ import { SiX } from 'react-icons/si'
 
 function SiteFooter() {
   return (
-    <Footer container className='bg-black text-white sticky bottom-0 z-10'>
+    <Footer
+      container
+      className='bg-black text-white lg:sticky lg:bottom-0 z-10'>
       <div className='w-full text-center '>
         <div className='w-full justify-between sm:flex sm:items-center sm:justify-between'>
           <Footer.Brand

@@ -4,8 +4,10 @@ import { Navbar, Button, Dropdown } from 'flowbite-react'
 import headshot from '../../../public/headshot.jpeg'
 import supabase from '../../../lib/supabase'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 function Navigation() {
+  const router = useRouter()
   return (
     <Navbar
       fluid
@@ -22,7 +24,10 @@ function Navigation() {
         </span>
       </Navbar.Brand>
       <div className='flex md:order-2'>
-        <Button className='hidden lg:block' color='light'>
+        <Button
+          onClick={() => router.push('/contact')}
+          className='hidden lg:block'
+          color='light'>
           Contact Me!
         </Button>
         <Navbar.Toggle />

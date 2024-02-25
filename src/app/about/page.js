@@ -9,11 +9,12 @@ export default function About() {
         <h3 className='text-4xl font-semibold mb-8'>{`<A Message from the Dev/>`}</h3>
 
         <p className=' lg:text-xl mb-4'>
-          As a seasoned full-stack web developer, I bring a wealth of experience
-          and expertise to every project I undertake. With a profound
-          understanding of front-end development, back-end development, and
-          UI/UX Design, I am passionate about crafting immersive and intuitive
-          user experiences that captivate and engage audiences.
+          Hello! My name is Shawn! I am a developer & digital creative. I bring
+          a wealth of experience and expertise to every project I undertake.
+          With a profound understanding of front-end development, back-end
+          development, and UI/UX Design, I am passionate about crafting
+          immersive and intuitive user experiences that captivate and engage
+          audiences.
         </p>
         <p className=' lg:text-xl mb-4'>
           My approach to development is deeply rooted in user-centric design
