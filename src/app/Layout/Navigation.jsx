@@ -22,7 +22,9 @@ function Navigation() {
         </span>
       </Navbar.Brand>
       <div className='flex md:order-2'>
-        <Button color='light'>Contact Me!</Button>
+        <Button className='hidden lg:block' color='light'>
+          Contact Me!
+        </Button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>

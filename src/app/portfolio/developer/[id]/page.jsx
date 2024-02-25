@@ -17,9 +17,9 @@ async function ProjectDetails({ params }) {
   // const projects = filter[0]
 
   return (
-    <div>
-      <section className='flex justify-between items-start mt-8 mb-8'>
-        <h1 className='text-7xl lg:text-8xl font-extralight mt-8 text-center bg-gradient-to-r from-white to-purple-500 bg-clip-text text-transparent p-2'>
+    <div className='container max-w-screen-sm lg:max-w-screen-2xl'>
+      <section className='flex justify-between lg:items-start items-center mt-8 mb-8'>
+        <h1 className='text-4xl lg:text-8xl font-extralight mt-8 text-center bg-gradient-to-r from-white to-purple-500 bg-clip-text text-transparent p-2'>
           {projects.project_name}
         </h1>
         <div className='flex justify-center items-center space-x-2 mr-4'>

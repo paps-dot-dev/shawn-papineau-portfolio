@@ -4,19 +4,18 @@ import headshot from '../../../public/headshot.jpeg'
 
 export default function About() {
   return (
-    <main className='flex justify-center items-center flex-col lg:flex-row space-x-16'>
-      <ContactCard headshot={headshot} />
-      <section className='w-full lg:w-1/2 bg-white  text-black lg:p-24 rounded-lg'>
+    <main className='flex justify-center items-center flex-col lg:flex-row lg:space-x-16'>
+      <section className=' lg:w-1/2 bg-white  text-black lg:p-24 rounded-lg mt-8 mb-8 p-10'>
         <h3 className='text-4xl font-semibold mb-8'>{`<A Message from the Dev/>`}</h3>
 
-        <p className=' text-xl mb-4'>
+        <p className=' lg:text-xl mb-4'>
           As a seasoned full-stack web developer, I bring a wealth of experience
           and expertise to every project I undertake. With a profound
           understanding of front-end development, back-end development, and
           UI/UX Design, I am passionate about crafting immersive and intuitive
           user experiences that captivate and engage audiences.
         </p>
-        <p className=' text-xl mb-4'>
+        <p className=' lg:text-xl mb-4'>
           My approach to development is deeply rooted in user-centric design
           principles—I am constantly exploring new ways to innovate and elevate
           the digital landscape, always keeping the end user at the forefront of
@@ -25,7 +24,7 @@ export default function About() {
           thrive on the challenge of delivering exceptional digital solutions
           that leave a lasting impression.
         </p>
-        <p className=' text-xl mb-4'>
+        <p className=' lg:text-xl mb-4'>
           Beyond my proficiency in front-end development, I also possess a
           robust background in data architecture and analytics. Leveraging this
           expertise, I am adept at optimizing performance, streamlining
@@ -38,6 +37,7 @@ export default function About() {
           you to bring your vision to life and deliver exceptional results.
         </p>
       </section>
+      <ContactCard headshot={headshot} />
     </main>
   )
 }
