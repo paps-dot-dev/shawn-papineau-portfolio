@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
       <head>
         <ThemeModeScript />
       </head>
-      <body className={inter.className}>
+      <body className={`bg-black text-white ${inter.className}`}>
         <Navigation />
-        <main className='flex flex-col items-center  justify-between py-32 px-8 max-w-screen'>
+        <main className='flex flex-col items-center  justify-between lg:py-32 px-8 container mx-auto'>
           {children}
         </main>
         <ToastContainer />

@@ -71,15 +71,15 @@ function ContactCard({ headshot }) {
   }
 
   return (
-    <Card className='max-w-xl  pt-8 px-24 bg-gray-950 border-purple-400'>
+    <Card className='  lg:max-w-xl  pt-8 px-24 bg-gray-950 border-purple-400'>
       <div className='flex flex-col justify-center items-center pb-10'>
         <Image
           alt='Bonnie image'
           src={headshot}
-          className='mb-3 rounded-full shadow-lg h-[200px] w-[200px] lg:h-80 lg:w-80 border-2 border-purple-500'
+          className='mb-3 rounded-full shadow-lg h-[150px] w-[150px] lg:h-80 lg:w-80 border-2 border-purple-500'
         />
 
-        <h5 className='mb-1 text-2xl font-medium text-gray-200 dark:text-white'>
+        <h5 className='mb-1 text-lg lg:text-2xl font-medium text-gray-200 dark:text-white'>
           Shawn Papineau
         </h5>
         <div className='text-xs text-gray-500 dark:text-gray-400'>

@@ -10,7 +10,7 @@ function ServiceCard({ service }) {
     <>
       <Link href={service.url_slug}>
         <Card
-          className='max-w-lg min-h-[500px] lg:mx-20 shadow-white shadow-lg ring-2 ring-purple-500 hover:opacity-80 hover:bg-opacity-80 duration-150 ease-linear cursor-pointer'
+          className='lg:max-w-lg max-w-[400px] min-h-[500px] lg:mx-20 shadow-white shadow-lg ring-2 ring-purple-500 hover:opacity-80 hover:bg-opacity-80 duration-150 ease-linear cursor-pointer'
           renderImage={() => (
             <img
               width={500}

@@ -27,20 +27,20 @@ import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
 export default function Home() {
   return (
     <div className=''>
-      <div className='flex justify-between items-center w-screen px-10 font-extralight text-gray-400 text-lg lg:max-w-[1900px] mx-auto'>
+      <div className='flex justify-between items-center w-screen lg:px-10 px-4 text-sm font-extralight text-gray-400 lg:text-lg lg:max-w-[1900px] mx-auto'>
         <p>Web Designer</p>
         <p>Web Developer</p>
         <p>Digital Creative</p>
       </div>
-      <section className='flex flex-col justify-center items-center pb-24 lg:p-32 p-8 mt-32  mx-auto font-extralight max-w-screen-sm lg:max-w-screen-2xl '>
-        <h1 className=' text-6xl lg:text-[5em]'>
+      <section className='flex flex-col justify-center items-center pb-24 lg:p-32 p-8 lg:mt-32 mt-8 mx-auto font-extralight max-w-screen-sm lg:max-w-screen-2xl '>
+        <h1 className=' text-5xl lg:text-[5em]'>
           Make your next <br></br> <Typewriter /> <br /> a{' '}
           <span className='bg-gradient-to-tr from-indigo-400 to-violet-500 bg-clip-text text-transparent font-medium'>
             creative
           </span>{' '}
           one.
         </h1>
-        <p className=' lg:mx-auto lg:text-xl font-light max-w-md mt-8 lg:max-w-screen-lg '>
+        <p className=' lg:mx-auto lg:text-xl font-light w-screen text-sm text-center p-2 lg:p-0 mt-2 lg:mt-8 lg:max-w-screen-lg '>
           In a world where online presence is paramount, I specialize in
           crafting bespoke solutions tailored to your needs. Whether you're
           dreaming of a sleek website, an immersive web application, or a
@@ -54,7 +54,7 @@ export default function Home() {
         </Link>
       </section>
       <section className='mb-8'>
-        <div className='flex justify-center space-x-5 lg:justify-between flex-wrap items-center text-5xl lg:text-7xl lg:px-32'>
+        <div className='flex justify-center space-x-5 lg:justify-between flex-wrap items-center text-4xl lg:text-7xl lg:px-32'>
           <SiReact />
           <SiNextdotjs />
           <SiAngular />
@@ -69,7 +69,7 @@ export default function Home() {
         <MdKeyboardDoubleArrowDown />
       </div>
       <section>
-        <h2 className='text-center text-4xl lg:text-7xl mt-64'>
+        <h2 className='text-center text-4xl lg:text-7xl mt-32 lg:mt-64'>
           Let's build something extraordinary...
           <span className='bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent '>
             together
@@ -160,7 +160,7 @@ export default function Home() {
               different sizes.
             </p>
             <Link
-              className='text-2xl bg-purple-800 p-4 w-full rounded-full text-center hover:bg-gray-300 hover:text-purple-800 duration-150 ease-linear'
+              className='text-xl bg-purple-800 p-4 w-full rounded-full text-center hover:bg-gray-300 hover:text-purple-800 duration-150 ease-linear'
               href={'/contact'}>
               Let's Chat!
             </Link>
