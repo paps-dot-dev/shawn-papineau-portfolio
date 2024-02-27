@@ -8,10 +8,10 @@ function ProjectCard({ project }) {
     <Link
       title={`${project.project_details}`}
       href={`/portfolio/developer/${project.id}`}>
-      <Card className='w-[400px] h-[500px] text-black mb-4 hover:-translate-y-4 opacity-50 hover:opacity-100 ease-linear duration-200 '>
-        <img src={project.project_hero} className=' rounded-lg ' />
+      <Card className='mx-4  my-4 w-[400px] h-[500px] text-white hover:-translate-y-4 opacity-50 hover:opacity-100 ease-linear duration-200 bg-gray-600 bg-opacity-50 border-purple-500 hover:shadow-md hover:shadow-white rounded-2xl  '>
+        <img src={project.project_hero} className=' rounded-lg h-[300px] ' />
         <div className='flex justify-between items-center'>
-          <p>{project.project_name}</p>
+          <p className='text-lg font-semibold'>{project.project_name}</p>
           <p className='text-xs'>{project.project_completion_date}</p>
         </div>
         <div className='mt-auto'>
