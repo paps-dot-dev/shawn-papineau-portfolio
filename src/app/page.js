@@ -47,29 +47,26 @@ export default function Home() {
           dynamic e-commerce platform, I have the skills and ingenuity to turn
           your ideas into reality.
         </p>
-        <Link
-          href='/contact'
-          className='bg-gradient-to-tr from-purple-900 to-purple-800 p-4 w-1/2 rounded-full mt-4 text-xl font-extralight text-center lg:w-[560px] lg:p-5 lg:mt-12 hover:to-purple-600 duration-200 ease-linear hover:-translate-y-2'>
-          Let's Connect!
-        </Link>
-      </section>
-      <section className='mb-8'>
-        <div className='flex justify-center space-x-5 lg:justify-between flex-wrap items-center text-4xl lg:text-7xl lg:px-32'>
-          <SiReact />
-          <SiNextdotjs />
-          <SiAngular />
-          <SiAstro />
-          <SiAdobephotoshop />
-          <SiFigma />
-          <SiAdobepremierepro />
+        <div className='flex justify-center items-center space-x-4 mt-8'>
+          <Link
+            href='/contact'
+            className='bg-gradient-to-tr from-purple-900 to-purple-700 p-4 rounded-lg mt-4 text-md font-extralight text-center  hover:to-purple-600 duration-100 ease-linear hover:opacity-40 lg:px-24'>
+            Let's Connect!
+          </Link>
+          <Link
+            className='bg-gradient-to-tr from-purple-400 to-blue-400 bg-clip-text text-transparent p-4 rounded-lg mt-4 text-md font-bold border-2 border-purple-400 text-center  hover:to-purple-600 duration-100 ease-linear hover:opacity-40 lg:px-24'
+            href={'/portfolio'}>
+            See My Work
+          </Link>
         </div>
       </section>
+
       <div className='flex flex-col justify-center items-center text-4xl font-extralight animate-pulse text-gray-400'>
         <p className='text-xs'>Scroll Down</p>
         <MdKeyboardDoubleArrowDown />
       </div>
       <section>
-        <h2 className='text-center text-4xl lg:text-7xl mt-32 lg:mt-64'>
+        <h2 className='text-center text-4xl p-16 lg:text-5xl mt-32 lg:mt-64'>
           Let's build something extraordinary...
           <span className='bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent '>
             together
@@ -169,9 +166,9 @@ export default function Home() {
       </section>
       <section className=' mx-auto text-center mt-80'>
         <Link
-          href={'/portfolio/developer'}
+          href={'/portfolio'}
           className='text-4xl  mt-80 text-blue-500 font-semibold opacity-50 hover:opacity-100'>
-          Still Not Convinced?
+          Still Not Convinced? Check Out My Work Here.
         </Link>
       </section>
     </div>
