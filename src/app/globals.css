@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+.portfolio-link-dev {
+  background-image: url('https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-assets/code.png');
+  background-size: cover;
+}
+
+.portfolio-link-design {
+  background-image: url('https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-assets/ui-ux.png');
+  background-size: cover;
+}

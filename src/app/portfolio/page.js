@@ -72,17 +72,24 @@ export const metadata = {
 
 function Portfolio() {
   return (
-    <section className='text-black'>
-      <h1 className='text-white'>Solutions I've Worked On</h1>
-      <div className='flex flex-col lg:flex-row justify-center items-center '>
-        <Link href={'/portfolio/developer'}>
-          <Card className='w-64'>
-            <p>Dev</p>
-          </Card>
-        </Link>
-        <Card className='w-64'>
-          <p>Design</p>
-        </Card>
+    <section className=' container'>
+      <h1 className='text-white text-5xl text-center mt-4'>Portfolio</h1>
+      <p className='text-center p-2 opacity-50'>
+        Select a portfolio below to see my work.
+      </p>
+      <div className='flex flex-col justify-center items-center  mt-16'>
+        <div className='flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 justify-center items-center'>
+          <Link href={'/portfolio/developer'}>
+            <div className='portfolio-link-dev text-white rounded-2xl p-2 text-2xl lg:p-8 lg:text-5xl flex flex-col justify-end hover:opacity-30 ease-linear duration-100 font-semibold w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]'>
+              <p>Development</p>
+            </div>
+          </Link>
+          <Link href={'/portfolio/design'}>
+            <div className='portfolio-link-design text-white rounded-2xl p-2 text-2xl lg:p-8 lg:text-5xl flex flex-col justify-end hover:opacity-30 ease-linear duration-100 font-semibold w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]'>
+              <p>Design</p>
+            </div>
+          </Link>
+        </div>
       </div>
     </section>
   )
