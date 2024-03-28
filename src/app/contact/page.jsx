@@ -57,28 +57,15 @@ export default function ContactPage() {
   }
   return (
     <>
-      <h1 className='text-6xl mb-8 bg-gradient-to-br from-purple-400 to-indigo-500 bg-clip-text text-transparent'>
+      <h1 className='text-6xl p-2 bg-gradient-to-br from-purple-400 to-indigo-500 bg-clip-text text-transparent'>
         Let's Get In Touch.
       </h1>
-      <div className='flex justify-center items-center space-x-16 text-4xl mb-16'>
-        <a
-          href='https://instagram.com/shawn.paps'
-          className='rounded-full ring-4 ring-purple-500 p-6 hover:bg-white hover:text-black ease-linear duration-200 hover:animate-pulse '>
-          <FaInstagram />
-        </a>
-        <a
-          href='https://github.com/paps-dot-dev'
-          className='rounded-full ring-4 ring-purple-500 p-6 hover:bg-white hover:text-black ease-linear duration-200 hover:animate-pulse '>
-          <FaGithub />
-        </a>
-        <a
-          href='https://x.com/shawn_paps'
-          className='rounded-full ring-4 ring-purple-500 p-6 hover:bg-white hover:text-black ease-linear duration-200 hover:animate-pulse '>
-          <SiX />
-        </a>
-      </div>
-      <form className='bg-white  rounded-xl w-full max-w-screen-xl px-8 lg:px-16 pb-8'>
-        <h1 className='text-black py-8 text-lg lg:text-2xl font-semibold'>
+      <p className='mb-8'>
+        Please fill out the contact form below to get in touch with me.
+      </p>
+
+      <form className='bg-white  rounded-xl w-full max-w-screen-xl px-8 lg:px-16 pb-8 my-8'>
+        <h3 className='text-black py-8 text-lg lg:text-2xl font-semibold'>
           <img
             className='inline rounded-full mr-4'
             width={64}
@@ -88,7 +75,7 @@ export default function ContactPage() {
             }
           />
           Contact Shawn Papineau:
-        </h1>
+        </h3>
         <Label htmlFor='firstName'>First Name</Label>
         <TextInput
           id='firstName'
@@ -137,6 +124,26 @@ export default function ContactPage() {
           </Button>
         </div>
       </form>
+      <h2 className='p-4 text-2xl opacity-50 font-extralight'>
+        Follow Shawn on Social Media!
+      </h2>
+      <div className='flex justify-center items-center space-x-16 text-4xl mb-16'>
+        <a
+          href='https://instagram.com/shawn.paps'
+          className='rounded-full ring-4 ring-purple-500 p-6 hover:bg-white hover:text-black ease-linear duration-200 hover:animate-pulse '>
+          <FaInstagram />
+        </a>
+        <a
+          href='https://github.com/paps-dot-dev'
+          className='rounded-full ring-4 ring-purple-500 p-6 hover:bg-white hover:text-black ease-linear duration-200 hover:animate-pulse '>
+          <FaGithub />
+        </a>
+        <a
+          href='https://x.com/shawn_paps'
+          className='rounded-full ring-4 ring-purple-500 p-6 hover:bg-white hover:text-black ease-linear duration-200 hover:animate-pulse '>
+          <SiX />
+        </a>
+      </div>
     </>
   )
 }

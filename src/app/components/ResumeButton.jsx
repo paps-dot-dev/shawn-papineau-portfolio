@@ -5,7 +5,7 @@ import supabase from '../../../lib/supabase'
 
 export default function ResumeButton() {
   const [resumeUrl, setResumeUrl] = useState(
-    'https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-files/shawnpapineau.pdf'
+    'https://iiyjiikbtsckevydbcsj.supabase.co/storage/v1/object/public/website-files/shawnpapineau_resume_website.pdf'
   )
 
   const fetchResumeUrl = async () => {
