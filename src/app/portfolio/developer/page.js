@@ -16,10 +16,10 @@ function DeveloperPortfolio() {
           <MdArrowBack className='opacity-40 hover:animate-pulse hover:opacity-100' />
         </Tooltip>
       </Link>
-      <h1 className='text-6xl mb-4 p-2 bg-gradient-to-br from-purple-500 to-blue-500 bg-clip-text text-transparent text-center'>
-        Creative Visions: Executed.
+      <h1 className='text-6xl mb-4 p-2 text-white  text-center'>
+        Developer Portfolio
       </h1>
-      <p className='text-center p-4  lg:max-w-[50%] text-2xl font-extralight text-gray-500 border-[1px] border-purple-400 mb-32  w-3/4 rounded-md mx-auto '>
+      <p className='text-center p-4  lg:max-w-[50%] text-xl font-extralight  mb-32  w-3/4 rounded-md mx-auto '>
         Check Out Some of the Projects I've worked on:
       </p>
 

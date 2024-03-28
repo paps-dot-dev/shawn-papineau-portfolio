@@ -5,7 +5,6 @@ import supabase from '../../../lib/supabase'
 import { MdSmartphone } from 'react-icons/md'
 import { FaGithub, FaInstagram } from 'react-icons/fa'
 import { SiX } from 'react-icons/si'
-import Image from 'next/image'
 import { toast } from 'react-toastify'
 
 export default function ContactPage() {

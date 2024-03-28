@@ -5,12 +5,14 @@ import Navigation from './Layout/Navigation'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import SiteFooter from './Layout/SiteFooter'
+import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Shawn Papineau',
-  description: 'Freelance Developer',
+  title: {
+    default: 'Shawn Papineau: Web Developer',
+  },
 }
 
 export default function RootLayout({ children }) {

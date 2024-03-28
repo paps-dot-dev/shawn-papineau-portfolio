@@ -6,15 +6,12 @@ async function Projects() {
   let { data: projects, error } = await supabase
     .from('projects')
     .select('*')
-    .range(0, 15)
-
-  const data = projects
-  const sortedData = data.sort()
-  console.log(sortedData)
+    .eq('project_category', 1)
+    .order('project_completion_date', { ascending: false })
 
   return (
     <div className='flex lg:flex-row flex-col flex-wrap justify-center items-center '>
-      {sortedData.map((project) => (
+      {projects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}
     </div>
