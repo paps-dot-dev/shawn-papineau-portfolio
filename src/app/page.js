@@ -1,21 +1,5 @@
-import Image from 'next/image'
 import headshot from '../../public/headshot.jpeg'
-import {
-  FaAngleDoubleDown,
-  FaBeer,
-  FaChevronDown,
-  FaReact,
-} from 'react-icons/fa'
-import {
-  SiAdobe,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
-  SiAngular,
-  SiAstro,
-  SiFigma,
-  SiNextdotjs,
-  SiReact,
-} from 'react-icons/si'
+
 import ServiceCards from './components/ServiceCards'
 import ContactCard from './components/ContactCard'
 
@@ -24,7 +8,6 @@ import Link from 'next/link'
 import Carousel from './components/Carousel'
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
 import CompanyCards from './components/CompanyCards'
-import { Button } from 'flowbite-react'
 
 export default function Home() {
   return (
@@ -125,8 +108,8 @@ export default function Home() {
             </p>
           </div>
         </article>
-        <article className='max-w-screen-lg flex flex-col justify-center items-center text-center m-auto'>
-          <p className='text-3xl lg:text-5xl text-center font-extralight'>
+        <article className='max-w-screen-sm lg:max-w-screen-lg flex flex-col justify-center items-center text-center m-auto'>
+          <p className='text-xl lg:text-3xl text-center font-extralight opacity-50'>
             Trusted by these Awesome Businesses.
           </p>
           <CompanyCards />
